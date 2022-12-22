@@ -4,7 +4,7 @@ const mysql = require('mysql');
 const http = require('http');
 const  cors = require('cors');
 
-app.use(cors({origin: '*'}));
+app.use(cors());
 
 app.use(express.json());
 
