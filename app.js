@@ -156,7 +156,10 @@ app.get('/incidents', (req, res) => {
 
     if (req.query.hasOwnProperty('limit')) {
         query = `${query} LIMIT ?`;
-        params.push(req.query.limit);
+        console.log(req.query.limit)
+        params.push(parseInt(req.query.limit));
+        console.log(params)
+        
     } else {
         query = `${query} LIMIT 1000`;
     }
