@@ -3,7 +3,12 @@ const app = express();
 const mysql = require('mysql');
 const http = require('http');
 
+let cors = require('cors');
+app.use(cors({origin: ['http://127.0.0.1:5500/']}));
+
 app.use(express.json());
+
+
 
 const port = process.env.PORT || 3000; 
 // neighborhoods and codes database
