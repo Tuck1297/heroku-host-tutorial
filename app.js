@@ -161,7 +161,7 @@ app.get('/incidents', (req, res) => {
         console.log(params)
         
     } else {
-        query = `${query} LIMIT 1000`;
+        query = `${query} LIMIT 10`;
     }
     // Get data
     databaseSelect(query, params, connection2)
