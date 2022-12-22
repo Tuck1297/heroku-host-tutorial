@@ -5,9 +5,9 @@ const http = require('http');
 const  cors = require('cors');
 
 app.use(cors());
+app.options('*', cors());
 
 app.use(express.json());
-
 
 
 const port = process.env.PORT || 3000; 
